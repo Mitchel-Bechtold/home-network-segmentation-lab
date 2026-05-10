@@ -1,0 +1,27 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sensitive files - NEVER commit these
+*-config.xml
+*-backup.xml
+*-passwords.txt
+credentials.txt
+*.key
+*.pem
+
+# Personal notes (if you don't want them public)
+NOTES.md
+TODO-personal.md
+
+# Temporary files
+*.tmp
+*.bak
