@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" font-family="Arial, sans-serif">
+  <!-- Background -->
+  <rect width="1400" height="1000" fill="#1a1a1a"/>
+  
+  <!-- Title -->
+  <text x="700" y="40" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">Home Network Segmentation Lab</text>
+  <text x="700" y="68" font-size="14" fill="#aaaaaa" text-anchor="middle">Multi-VLAN segmented network with pfSense, validated through penetration testing</text>
+  
+  <!-- Internet Cloud -->
+  <ellipse cx="700" cy="120" rx="80" ry="35" fill="#4a4a4a" stroke="#ffffff" stroke-width="2"/>
+  <text x="700" y="125" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="bold">Internet</text>
+  
+  <!-- Connection: Internet to ISP Modem -->
+  <line x1="700" y1="155" x2="700" y2="200" stroke="#ffffff" stroke-width="2"/>
+  <text x="715" y="180" font-size="11" fill="#888888">WAN</text>
+  
+  <!-- ISP Modem -->
+  <rect x="640" y="200" width="120" height="60" rx="5" fill="#2c2c2c" stroke="#ffffff" stroke-width="2"/>
+  <text x="700" y="225" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">ISP Modem</text>
+  <text x="700" y="245" font-size="11" fill="#aaaaaa" text-anchor="middle">Public WAN IP</text>
+  
+  <!-- Connection: ISP to pfSense -->
+  <line x1="700" y1="260" x2="700" y2="305" stroke="#ffffff" stroke-width="2"/>
+  <text x="715" y="287" font-size="11" fill="#888888">igb0 (WAN)</text>
+  
+  <!-- pfSense Firewall -->
+  <rect x="600" y="305" width="200" height="90" rx="5" fill="#8b0000" stroke="#ffffff" stroke-width="2"/>
+  <text x="700" y="330" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">pfSense Firewall</text>
+  <text x="700" y="350" font-size="12" fill="#ffcccc" text-anchor="middle">Dell OptiPlex 7040 + Intel I350-T2</text>
+  <text x="700" y="368" font-size="11" fill="#ffcccc" text-anchor="middle">Stateful firewall | Multi-VLAN routing</text>
+  <text x="700" y="384" font-size="11" fill="#ffcccc" text-anchor="middle">pfBlockerNG DNS filtering</text>
+  
+  <!-- Connection: pfSense to Switch (trunk) -->
+  <line x1="700" y1="395" x2="700" y2="445" stroke="#00aaff" stroke-width="3"/>
+  <text x="715" y="425" font-size="11" fill="#00aaff" font-weight="bold">em0 (LAN trunk)</text>
+  <text x="715" y="440" font-size="10" fill="#00aaff">802.1Q tagged</text>
+  
+  <!-- Managed Switch -->
+  <rect x="550" y="445" width="300" height="70" rx="5" fill="#2c2c2c" stroke="#ffffff" stroke-width="2"/>
+  <text x="700" y="470" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">TP-Link TL-SG108E</text>
+  <text x="700" y="490" font-size="12" fill="#aaaaaa" text-anchor="middle">8-port managed switch</text>
+  <text x="700" y="507" font-size="11" fill="#aaaaaa" text-anchor="middle">802.1Q VLAN tagging | Trunk + access ports</text>
+  
+  <!-- TP-Link EAP225 - moved to lower left, separate from VLANs -->
+  <rect x="40" y="445" width="180" height="80" rx="5" fill="#2c2c2c" stroke="#ffffff" stroke-width="2"/>
+  <text x="130" y="470" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">TP-Link EAP225</text>
+  <text x="130" y="488" font-size="11" fill="#aaaaaa" text-anchor="middle">Wireless Access Point</text>
+  <text x="130" y="503" font-size="10" fill="#aaaaaa" text-anchor="middle">Per-SSID VLAN tagging</text>
+  <text x="130" y="518" font-size="10" fill="#aaaaaa" text-anchor="middle">802.11ac Wave 2 (PoE)</text>
+  
+  <!-- Trunk from switch to AP -->
+  <line x1="550" y1="480" x2="220" y2="480" stroke="#00aaff" stroke-width="3"/>
+  <text x="385" y="472" font-size="11" fill="#00aaff" font-weight="bold" text-anchor="middle">Trunk (PoE)</text>
+  <text x="385" y="498" font-size="10" fill="#00aaff" text-anchor="middle">VLAN 10, 20, 30 tagged</text>
+  
+  <!-- VLAN Zones - 5 columns -->
+  
+  <!-- TRUSTED VLAN -->
+  <rect x="40" y="560" width="220" height="380" rx="8" fill="#0a3d0a" stroke="#00cc00" stroke-width="2"/>
+  <text x="150" y="585" font-size="16" fill="#00ff00" text-anchor="middle" font-weight="bold">TRUSTED</text>
+  <text x="150" y="603" font-size="12" fill="#88ff88" text-anchor="middle">VLAN 10</text>
+  <text x="150" y="620" font-size="11" fill="#88ff88" text-anchor="middle">192.168.10.0/24</text>
+  
+  <text x="150" y="650" font-size="11" fill="#ccffcc" text-anchor="middle" font-weight="bold">Trust Level: High</text>
+  
+  <line x1="60" y1="665" x2="240" y2="665" stroke="#00cc00" stroke-width="1"/>
+  
+  <text x="150" y="690" font-size="11" fill="#ffffff" text-anchor="middle">Devices:</text>
+  <text x="150" y="710" font-size="10" fill="#cccccc" text-anchor="middle">- Personal laptops</text>
+  <text x="150" y="725" font-size="10" fill="#cccccc" text-anchor="middle">- Phones</text>
+  <text x="150" y="740" font-size="10" fill="#cccccc" text-anchor="middle">- Gaming PC</text>
+  <text x="150" y="755" font-size="10" fill="#cccccc" text-anchor="middle">- Work devices</text>
+  
+  <text x="150" y="785" font-size="11" fill="#ffffff" text-anchor="middle">Access:</text>
+  <text x="150" y="805" font-size="10" fill="#88ff88" text-anchor="middle">[YES] Internet</text>
+  <text x="150" y="820" font-size="10" fill="#88ff88" text-anchor="middle">[YES] Inter-VLAN</text>
+  <text x="150" y="835" font-size="10" fill="#88ff88" text-anchor="middle">[YES] Manage pfSense</text>
+  
+  <text x="150" y="870" font-size="11" fill="#ffffff" text-anchor="middle">SSID:</text>
+  <text x="150" y="890" font-size="10" fill="#cccccc" text-anchor="middle">HomeNet-Trusted</text>
+  <text x="150" y="905" font-size="9" fill="#888888" text-anchor="middle">2.4 + 5 GHz</text>
+  
+  <text x="150" y="930" font-size="9" fill="#888888" text-anchor="middle">Ports: 3, 4</text>
+  
+  <!-- IOT VLAN -->
+  <rect x="280" y="560" width="220" height="380" rx="8" fill="#3d3d0a" stroke="#cccc00" stroke-width="2"/>
+  <text x="390" y="585" font-size="16" fill="#ffff00" text-anchor="middle" font-weight="bold">IOT (UNTRUSTED)</text>
+  <text x="390" y="603" font-size="12" fill="#ffff88" text-anchor="middle">VLAN 20</text>
+  <text x="390" y="620" font-size="11" fill="#ffff88" text-anchor="middle">192.168.20.0/24</text>
+  
+  <text x="390" y="650" font-size="11" fill="#ffffcc" text-anchor="middle" font-weight="bold">Trust Level: Low</text>
+  
+  <line x1="300" y1="665" x2="480" y2="665" stroke="#cccc00" stroke-width="1"/>
+  
+  <text x="390" y="690" font-size="11" fill="#ffffff" text-anchor="middle">Devices:</text>
+  <text x="390" y="710" font-size="10" fill="#cccccc" text-anchor="middle">- Smart TVs</text>
+  <text x="390" y="725" font-size="10" fill="#cccccc" text-anchor="middle">- Voice assistants</text>
+  <text x="390" y="740" font-size="10" fill="#cccccc" text-anchor="middle">- IP cameras</text>
+  <text x="390" y="755" font-size="10" fill="#cccccc" text-anchor="middle">- Smart bulbs/plugs</text>
+  
+  <text x="390" y="785" font-size="11" fill="#ffffff" text-anchor="middle">Access:</text>
+  <text x="390" y="805" font-size="10" fill="#88ff88" text-anchor="middle">[YES] Internet</text>
+  <text x="390" y="820" font-size="10" fill="#ff8888" text-anchor="middle">[NO] Other VLANs</text>
+  <text x="390" y="835" font-size="10" fill="#ff8888" text-anchor="middle">[NO] pfSense mgmt</text>
+  
+  <text x="390" y="870" font-size="11" fill="#ffffff" text-anchor="middle">SSID:</text>
+  <text x="390" y="890" font-size="10" fill="#cccccc" text-anchor="middle">HomeNet-IoT</text>
+  <text x="390" y="905" font-size="9" fill="#888888" text-anchor="middle">2.4 GHz only</text>
+  
+  <text x="390" y="930" font-size="9" fill="#888888" text-anchor="middle">Port: 7</text>
+  
+  <!-- GUEST VLAN -->
+  <rect x="520" y="560" width="220" height="380" rx="8" fill="#0a1f3d" stroke="#0099ff" stroke-width="2"/>
+  <text x="630" y="585" font-size="16" fill="#00aaff" text-anchor="middle" font-weight="bold">GUEST</text>
+  <text x="630" y="603" font-size="12" fill="#88ccff" text-anchor="middle">VLAN 30</text>
+  <text x="630" y="620" font-size="11" fill="#88ccff" text-anchor="middle">192.168.30.0/24</text>
+  
+  <text x="630" y="650" font-size="11" fill="#ccddff" text-anchor="middle" font-weight="bold">Trust Level: None</text>
+  
+  <line x1="540" y1="665" x2="720" y2="665" stroke="#0099ff" stroke-width="1"/>
+  
+  <text x="630" y="690" font-size="11" fill="#ffffff" text-anchor="middle">Devices:</text>
+  <text x="630" y="710" font-size="10" fill="#cccccc" text-anchor="middle">- Visitor phones</text>
+  <text x="630" y="725" font-size="10" fill="#cccccc" text-anchor="middle">- Visitor laptops</text>
+  <text x="630" y="740" font-size="10" fill="#cccccc" text-anchor="middle">- Temporary access</text>
+  
+  <text x="630" y="785" font-size="11" fill="#ffffff" text-anchor="middle">Access:</text>
+  <text x="630" y="805" font-size="10" fill="#88ff88" text-anchor="middle">[YES] Internet</text>
+  <text x="630" y="820" font-size="10" fill="#ff8888" text-anchor="middle">[NO] Other VLANs</text>
+  <text x="630" y="835" font-size="10" fill="#ff8888" text-anchor="middle">[NO] Other guests</text>
+  
+  <text x="630" y="870" font-size="11" fill="#ffffff" text-anchor="middle">SSID:</text>
+  <text x="630" y="890" font-size="10" fill="#cccccc" text-anchor="middle">HomeNet-Guest</text>
+  <text x="630" y="905" font-size="9" fill="#888888" text-anchor="middle">2.4 + 5 GHz</text>
+  
+  <text x="630" y="930" font-size="9" fill="#888888" text-anchor="middle">Wireless only</text>
+  
+  <!-- LAB VLAN -->
+  <rect x="760" y="560" width="220" height="380" rx="8" fill="#3d0a0a" stroke="#ff3333" stroke-width="2"/>
+  <text x="870" y="585" font-size="16" fill="#ff5555" text-anchor="middle" font-weight="bold">LAB</text>
+  <text x="870" y="603" font-size="12" fill="#ff8888" text-anchor="middle">VLAN 40</text>
+  <text x="870" y="620" font-size="11" fill="#ff8888" text-anchor="middle">192.168.40.0/24</text>
+  
+  <text x="870" y="650" font-size="11" fill="#ffcccc" text-anchor="middle" font-weight="bold">Trust Level: Hostile</text>
+  
+  <line x1="780" y1="665" x2="960" y2="665" stroke="#ff3333" stroke-width="1"/>
+  
+  <text x="870" y="690" font-size="11" fill="#ffffff" text-anchor="middle">Devices:</text>
+  <text x="870" y="710" font-size="10" fill="#cccccc" text-anchor="middle">- Kali Linux VM</text>
+  <text x="870" y="725" font-size="10" fill="#cccccc" text-anchor="middle">- Vulnerable VMs</text>
+  <text x="870" y="740" font-size="10" fill="#cccccc" text-anchor="middle">- Security research</text>
+  <text x="870" y="755" font-size="10" fill="#cccccc" text-anchor="middle">- Pentest tooling</text>
+  
+  <text x="870" y="785" font-size="11" fill="#ffffff" text-anchor="middle">Access:</text>
+  <text x="870" y="805" font-size="10" fill="#ff8888" text-anchor="middle">[NO] Internet (default)</text>
+  <text x="870" y="820" font-size="10" fill="#ff8888" text-anchor="middle">[NO] Other VLANs</text>
+  <text x="870" y="835" font-size="10" fill="#88ff88" text-anchor="middle">[YES] DNS only</text>
+  
+  <text x="870" y="870" font-size="11" fill="#ffffff" text-anchor="middle">SSID:</text>
+  <text x="870" y="890" font-size="10" fill="#ff8888" text-anchor="middle">(None - wired only)</text>
+  
+  <text x="870" y="930" font-size="9" fill="#888888" text-anchor="middle">Ports: 5, 6</text>
+  
+  <!-- MANAGEMENT VLAN -->
+  <rect x="1000" y="560" width="220" height="380" rx="8" fill="#2a2a2a" stroke="#aaaaaa" stroke-width="2"/>
+  <text x="1110" y="585" font-size="16" fill="#dddddd" text-anchor="middle" font-weight="bold">MANAGEMENT</text>
+  <text x="1110" y="603" font-size="12" fill="#bbbbbb" text-anchor="middle">VLAN 1</text>
+  <text x="1110" y="620" font-size="11" fill="#bbbbbb" text-anchor="middle">192.168.1.0/24</text>
+  
+  <text x="1110" y="650" font-size="11" fill="#eeeeee" text-anchor="middle" font-weight="bold">Trust Level: Admin</text>
+  
+  <line x1="1020" y1="665" x2="1200" y2="665" stroke="#aaaaaa" stroke-width="1"/>
+  
+  <text x="1110" y="690" font-size="11" fill="#ffffff" text-anchor="middle">Resources:</text>
+  <text x="1110" y="710" font-size="10" fill="#cccccc" text-anchor="middle">- pfSense .1</text>
+  <text x="1110" y="725" font-size="10" fill="#cccccc" text-anchor="middle">- Switch .2</text>
+  <text x="1110" y="740" font-size="10" fill="#cccccc" text-anchor="middle">- AP .3</text>
+  
+  <text x="1110" y="785" font-size="11" fill="#ffffff" text-anchor="middle">Access:</text>
+  <text x="1110" y="805" font-size="10" fill="#88ff88" text-anchor="middle">[YES] From Trusted</text>
+  <text x="1110" y="820" font-size="10" fill="#ff8888" text-anchor="middle">[NO] From IoT/Guest/Lab</text>
+  <text x="1110" y="835" font-size="10" fill="#88ff88" text-anchor="middle">[YES] OOB admin</text>
+  
+  <text x="1110" y="870" font-size="11" fill="#ffffff" text-anchor="middle">Purpose:</text>
+  <text x="1110" y="890" font-size="10" fill="#cccccc" text-anchor="middle">Network admin</text>
+  <text x="1110" y="905" font-size="10" fill="#cccccc" text-anchor="middle">infrastructure</text>
+  
+  <text x="1110" y="930" font-size="9" fill="#888888" text-anchor="middle">Port: 8</text>
+  
+  <!-- Connection lines from switch to VLANs -->
+  <line x1="600" y1="515" x2="150" y2="560" stroke="#00cc00" stroke-width="2"/>
+  <line x1="630" y1="515" x2="390" y2="560" stroke="#cccc00" stroke-width="2"/>
+  <line x1="700" y1="515" x2="630" y2="560" stroke="#0099ff" stroke-width="2"/>
+  <line x1="770" y1="515" x2="870" y2="560" stroke="#ff3333" stroke-width="2"/>
+  <line x1="800" y1="515" x2="1110" y2="560" stroke="#aaaaaa" stroke-width="2"/>
+  
+  <!-- Wireless symbols from AP to wireless VLANs -->
+  <path d="M 130 525 Q 130 545 150 560" stroke="#00cc00" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <path d="M 150 525 Q 250 545 390 560" stroke="#cccc00" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <path d="M 170 525 Q 380 545 630 560" stroke="#0099ff" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  
+  <!-- Legend Box -->
+  <rect x="1240" y="200" width="150" height="320" rx="5" fill="#2c2c2c" stroke="#ffffff" stroke-width="1"/>
+  <text x="1315" y="225" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="bold">Legend</text>
+  
+  <line x1="1255" y1="245" x2="1290" y2="245" stroke="#00aaff" stroke-width="3"/>
+  <text x="1295" y="249" font-size="10" fill="#ffffff">Trunk (tagged)</text>
+  
+  <line x1="1255" y1="265" x2="1290" y2="265" stroke="#ffffff" stroke-width="2"/>
+  <text x="1295" y="269" font-size="10" fill="#ffffff">Wired link</text>
+  
+  <line x1="1255" y1="285" x2="1290" y2="285" stroke="#00cc00" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="1295" y="289" font-size="10" fill="#ffffff">Wireless (VLAN)</text>
+  
+  <text x="1315" y="320" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Trust Tiers</text>
+  
+  <rect x="1255" y="332" width="15" height="12" fill="#0a3d0a" stroke="#00cc00"/>
+  <text x="1278" y="343" font-size="10" fill="#ffffff">Trusted</text>
+  
+  <rect x="1255" y="350" width="15" height="12" fill="#3d3d0a" stroke="#cccc00"/>
+  <text x="1278" y="361" font-size="10" fill="#ffffff">IoT/Untrusted</text>
+  
+  <rect x="1255" y="368" width="15" height="12" fill="#0a1f3d" stroke="#0099ff"/>
+  <text x="1278" y="379" font-size="10" fill="#ffffff">Guest</text>
+  
+  <rect x="1255" y="386" width="15" height="12" fill="#3d0a0a" stroke="#ff3333"/>
+  <text x="1278" y="397" font-size="10" fill="#ffffff">Lab (hostile)</text>
+  
+  <rect x="1255" y="404" width="15" height="12" fill="#2a2a2a" stroke="#aaaaaa"/>
+  <text x="1278" y="415" font-size="10" fill="#ffffff">Management</text>
+  
+  <text x="1315" y="445" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold">Security Layers</text>
+  <text x="1315" y="463" font-size="9" fill="#cccccc" text-anchor="middle">L2: VLAN segmentation</text>
+  <text x="1315" y="478" font-size="9" fill="#cccccc" text-anchor="middle">L3: Stateful firewall</text>
+  <text x="1315" y="493" font-size="9" fill="#cccccc" text-anchor="middle">DNS: pfBlockerNG</text>
+  <text x="1315" y="508" font-size="9" fill="#cccccc" text-anchor="middle">Mgmt: OOB separation</text>
+  
+  <!-- Footer -->
+  <text x="700" y="980" font-size="11" fill="#888888" text-anchor="middle">Validated through internal penetration testing with Kali Linux | See docs/08-segmentation-validation.md</text>
+</svg>
