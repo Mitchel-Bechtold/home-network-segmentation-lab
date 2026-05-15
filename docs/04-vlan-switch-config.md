@@ -143,10 +143,10 @@ Sample test results:
 
 | Port plugged into | DHCP IP received | VLAN |
 |-------------------|------------------|------|
-| Port 3 | 192.168.10.137 | TRUSTED ✓ |
-| Port 5 | 192.168.40.142 | LAB ✓ |
-| Port 7 | 192.168.20.118 | UNTRUSTED ✓ |
-| Port 8 | 192.168.1.50 | Management ✓ |
+| Port 3 | 192.168.10.137 | TRUSTED |
+| Port 5 | 192.168.40.142 | LAB |
+| Port 7 | 192.168.20.118 | UNTRUSTED |
+| Port 8 | 192.168.1.50 | Management |
 
 All access ports correctly assigning devices to intended VLANs.
 

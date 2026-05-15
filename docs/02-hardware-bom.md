@@ -14,7 +14,7 @@ Approximately $200 in hardware (used market pricing).
 |------|-------|
 | CPU | Intel Core i5-6500 (6th gen Skylake) |
 | RAM | 8 GB DDR4 |
-| Storage | [SSD 1TB in size] |
+| Storage | SSD 1TB in size |
 | Form Factor | Small Form Factor (SFF) |
 | Approximate Cost | $40 (used) |
 
