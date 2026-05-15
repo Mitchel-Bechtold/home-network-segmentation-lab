@@ -97,7 +97,7 @@ Walked through pfSense's first-run wizard:
 | Secondary DNS | 9.9.9.9 (Quad9) |
 | Override DNS | Unchecked |
 | Time Server | Default pfSense pool |
-| Timezone | [your timezone] |
+| Timezone | U.S. Eastern Time |
 | WAN Type | DHCP |
 | Block RFC1918 on WAN | Enabled |
 | Block bogons on WAN | Enabled |
