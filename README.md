@@ -43,7 +43,7 @@ Network segmentation was validated through internal penetration testing using Ka
 - Layer 2 broadcast domain properly isolated per VLAN
 - DNS-layer threat filtering applies across all segments
 
-See [docs/08-Segmentation-Validation.md](docs/08-Segmentation-Validation.md) for complete test results.
+See [docs/08-segmentation-validation.md](docs/08-segmentation-validation.md) for complete test results.
 
 ## Documentation
 
